@@ -50,8 +50,6 @@ class Mob(Entity):
                         self.bottom = entity.top
                         # self.center_y = entity.center_y + entity.height
                     self.collided(entity, 0, dy)
-        else:
-            self.flying = True
 
         if dx != 0:
 
