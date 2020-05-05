@@ -36,3 +36,11 @@ Instructions
     -,=    zoom in/out
     F10    toggle fullscreen
     ENTER  to type
+
+-------------------------------
+Screenshots
+-------------------------------
+
+![screenshot_1](https://github.com/markjoshua12/trifecta/blob/master/resources/trifecta_screenshot.png)</br>
+![screenshot_2](https://github.com/markjoshua12/trifecta/blob/master/resources/trifecta_screenshot_2.png)</br>
+![screenshot_3](https://github.com/markjoshua12/trifecta/blob/master/resources/trifecta_screenshot_3.png)
