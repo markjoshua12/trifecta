@@ -29,7 +29,7 @@ class PyGameJam2020(arcade.Window):
         self.frames = 0
         self.time = 0
 
-        self.debug = True
+        self.debug = False
         if self.debug:
             import psutil
             self.debug_text = ""
