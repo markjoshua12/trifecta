@@ -2,13 +2,13 @@
 import arcade
 import math
 
-import LevelGenerator
-import Textures
-import Sounds
+from src.level import LevelGenerator
+from src import Textures
+from src import Sounds
 
-from Constants import TILE_SIZE, ROOM_WIDTH, ROOM_HEIGHT
-from Mob import Mob
-from Projectile import Projectile
+from src.Constants import TILE_SIZE, ROOM_WIDTH, ROOM_HEIGHT
+from src.entity.Mob import Mob
+from src.entity.Projectile import Projectile
 
 class Player(Mob):
 

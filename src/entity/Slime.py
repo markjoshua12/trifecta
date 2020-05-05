@@ -1,5 +1,5 @@
 
-from Enemy import Enemy
+from src.entity.Enemy import Enemy
 
 class Slime(Enemy):
     def __init__(self, texture, x, y, difficulty):
@@ -17,7 +17,7 @@ class Slime(Enemy):
         super().update()
 
     def move_to(self, entity):
-        import Sounds
+        from src import Sounds
         if self.curr_move_cd == 0:
             if not self.jumping:
                 self.change_y = self.jump_height

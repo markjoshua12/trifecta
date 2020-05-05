@@ -1,6 +1,6 @@
 
-from Mob import Mob
-from Entity import Entity
+from src.entity.Mob import Mob
+from src.entity.Entity import Entity
 
 class Projectile(Mob):
 
@@ -15,7 +15,7 @@ class Projectile(Mob):
         self.type = type
 
     def create_hit_box(self):
-        import Maths
+        from src import Maths
         self.set_hit_box(Maths.create_hit_box(8, 8))
     
     def update(self):

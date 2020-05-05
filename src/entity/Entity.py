@@ -1,7 +1,7 @@
 
 import arcade
 
-from Constants import SQUARE_HIT_BOX
+from src.Constants import SQUARE_HIT_BOX
 
 TILE_SIZE = 16
 

@@ -2,8 +2,8 @@
 import arcade
 import pyglet.gl as gl
 
-from Constants import WIDTH, HEIGHT
-import Textures
+from src.Constants import WIDTH, HEIGHT
+from src import Textures
 
 SYMBOLS_0 = " !\"#£$%&'()*+" # 32-43
 SYMBOLS = ",-./0123456789:;<=>?@" # 44-64

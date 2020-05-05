@@ -1,9 +1,9 @@
 
 import arcade
 
-import Textures
+from src import Textures
 
-from Enemy import Enemy
+from src.entity.Enemy import Enemy
 
 class EnemyBall(Enemy):
 

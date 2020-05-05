@@ -1,5 +1,5 @@
 
-from Entity import Entity
+from src.entity.Entity import Entity
 
 class Tile(Entity):
 

@@ -1,11 +1,11 @@
 
 import arcade
 
-import Maths
-import Textures
+from src import Maths
+from src import Textures
 
-from Enemy import Enemy
-from EnemyBall import EnemyBall
+from src.entity.Enemy import Enemy
+from src.entity.EnemyBall import EnemyBall
 
 class Boss(Enemy):
 

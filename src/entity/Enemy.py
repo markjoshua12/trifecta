@@ -1,11 +1,12 @@
 
 import arcade
 
-import Maths
-import Textures
+from src import Maths
+from src import Textures
 
-from Mob import Mob
-from Projectile import Projectile
+from src.entity.Mob import Mob
+from src.entity.Projectile import Projectile
+from src.entity.Heart import Heart
 
 class Enemy(Mob):
 
@@ -82,16 +83,16 @@ class Enemy(Mob):
         super().collided(entity, dx, dy)
     
     def hurt(self, damage, knockback):
-        import Sounds
+        from src import Sounds
         if self.curr_invis_frame <= 0:
             Sounds.play(Sounds.SKELETON_HIT)
 
         super().hurt(damage, knockback)
 
     def die(self):
-        import random, Heart
+        import random
         chance = random.randrange(0, 100)
         if chance > 80:
-            heart = Heart.Heart(self.center_x, self.center_y)
+            heart = Heart(self.center_x, self.center_y)
             self.level.add_entity_to_list(heart, self.level.entities)
         super().die()

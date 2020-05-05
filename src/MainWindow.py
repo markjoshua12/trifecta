@@ -3,18 +3,18 @@ import arcade
 import pyglet
 import pyglet.gl as gl
 
-import Level
-import Keyboard
-import Camera
-import Maths
-import Textures
-import Graphics
+from src.level.Level import Level
+from src.Keyboard import Keyboard
+from src.graphics.Camera import Camera
+from src import Maths
+from src import Textures
+from src.graphics import Graphics
 
 import os
 import time
 
-from TextInput import TextInput
-from Constants import WIDTH, HEIGHT, TITLE
+from src.graphics.TextInput import TextInput
+from src.Constants import WIDTH, HEIGHT, TITLE
 
 LOADING = 0
 PLAYING = 1
@@ -43,9 +43,9 @@ class PyGameJam2020(arcade.Window):
         self.text_input = TextInput()
         self.typing = False
 
-        self.camera = Camera.Camera(WIDTH, HEIGHT)
+        self.camera = Camera(WIDTH, HEIGHT)
         self.camera.zoom(20)
-        self.keyboard = Keyboard.Keyboard()
+        self.keyboard = Keyboard()
 
         self.set_min_size(WIDTH, HEIGHT)
         self.prev_size = self.get_size()
@@ -57,7 +57,7 @@ class PyGameJam2020(arcade.Window):
     def setup(self):
         
         self.game_state = LOADING
-        self.level = Level.Level(self.camera, self.keyboard)
+        self.level = Level(self.camera, self.keyboard)
         self.prev_perf_time = 0
 
     def on_update(self, delta):
@@ -157,11 +157,3 @@ class PyGameJam2020(arcade.Window):
 
         # self.set_size(int(self.prev_size[0] * scale), int(self.prev_size[1] * scale))
         # self.prev_size = self.get_size()
-
-def main():
-    window = PyGameJam2020()
-    window.setup()
-    arcade.run()
-
-if __name__ == "__main__":
-    main()

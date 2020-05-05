@@ -2,7 +2,7 @@
 import arcade
 import pyglet
 
-import Maths
+from src import Maths
 
 class Camera:
     def __init__(self, width, height):

@@ -1,7 +1,7 @@
 
-import Textures
+from src import Textures
 
-from Mob import Mob
+from src.entity.Mob import Mob
 
 class Heart(Mob):
     def __init__(self, x, y):

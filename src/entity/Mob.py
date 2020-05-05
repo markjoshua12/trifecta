@@ -1,8 +1,9 @@
 
 import arcade
-from Entity import Entity, Tex
 
-from Constants import TILE_SIZE
+from src.entity.Entity import Entity, Tex
+
+from src.Constants import TILE_SIZE
 
 class Mob(Entity):
 

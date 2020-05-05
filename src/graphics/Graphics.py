@@ -3,7 +3,7 @@ from typing import Dict
 
 import arcade
 
-import Textures
+from src import Textures
 
 SYMBOLS_0 = " !\"#£$%&'()*+" # 32-43
 SYMBOLS = ",-./0123456789:;<=>?@" # 44-64

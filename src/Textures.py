@@ -3,7 +3,7 @@ import os
 import arcade
 import PIL
 
-from Constants import TILE_SIZE
+from src.Constants import TILE_SIZE
 
 class Textures:
 

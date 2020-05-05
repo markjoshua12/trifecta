@@ -4,23 +4,23 @@ import pyglet.gl as gl
 import random
 import PIL
 
-import LevelGenerator
-import Maths
-import Graphics
-import Textures
+from src.level import LevelGenerator
+from src import Maths
+from src.graphics import Graphics
+from src import Textures
 
-from Engine import Engine
-from Entity import Entity, Texs, Tex
-from Projectile import Projectile
-from Mob import Mob
-from Player import Player
-from EnemyBall import EnemyBall
-from Enemy import Enemy
-from Tile import Tile
-from Slime import Slime
-from Boss import Boss
+from src.level.Engine import Engine
+from src.entity.Entity import Entity, Texs, Tex
+from src.entity.Projectile import Projectile
+from src.entity.Mob import Mob
+from src.entity.Player import Player
+from src.entity.EnemyBall import EnemyBall
+from src.entity.Enemy import Enemy
+from src.entity.Tile import Tile
+from src.entity.Slime import Slime
+from src.entity.Boss import Boss
 
-from Constants import WIDTH, HEIGHT, \
+from src.Constants import WIDTH, HEIGHT, \
     TILE_SIZE, GRAVITY, SQUARE_HIT_BOX, \
     ROOM_WIDTH, ROOM_HEIGHT
 

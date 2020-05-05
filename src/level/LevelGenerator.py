@@ -1,17 +1,17 @@
 
 import random
 
-import Textures
+from src import Textures
 
-from Tile import Tile
-from Enemy import Enemy
-from Slime import Slime
-from Boss import Boss
-from SpikyBall import SpikyBall
-from Entity import Texs, Tex
-from RoomTemplates import *
+from src.entity.Tile import Tile
+from src.entity.Enemy import Enemy
+from src.entity.Slime import Slime
+from src.entity.Boss import Boss
+from src.entity.SpikyBall import SpikyBall
+from src.entity.Entity import Texs, Tex
+from src.level.RoomTemplates import *
 
-from Constants import TILE_SIZE, ROOM_WIDTH, ROOM_HEIGHT
+from src.Constants import TILE_SIZE, ROOM_WIDTH, ROOM_HEIGHT
 
 LEVEL_DEPTH = 4
 

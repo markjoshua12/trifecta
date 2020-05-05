@@ -1,5 +1,5 @@
 
-from Constants import TILE_SIZE
+from src.Constants import TILE_SIZE
 
 class Engine:
 
