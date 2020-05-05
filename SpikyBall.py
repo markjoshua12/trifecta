@@ -12,12 +12,11 @@ class SpikyBall(Enemy):
     
     def update(self):
 
-        if self.intersects(self.level.player) and self.level.player.curr_invis_frame <= 0:
-            self.die()
-
         super().update()
 
     def move_to(self, entity):
+        if self.intersects(self.level.player) and self.level.player.curr_invis_frame <= 0:
+            self.die()
         if self.center_x > entity.center_x:
             self.change_x = -self.movespeed
         elif self.center_x < entity.center_x:

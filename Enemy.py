@@ -26,7 +26,7 @@ class Enemy(Mob):
         self.tex = texture
 
         # The enemy range in Manhattan distance
-        self.range = 16 * 16
+        self.range = 24 * 16
 
     def update(self):
 
@@ -42,16 +42,19 @@ class Enemy(Mob):
                 if isinstance(entity, Projectile):
                     self.hurt(entity.damage, 0)
             self.move_to(player)
-        else:
-            self.wander()
-        
-        if self.curr_invis_frame > 0 and self.curr_invis_frame % 12 < 6:
-            self.texture = Textures.get_texture(15, 15)
-        else:
-            self.texture = self.tex
+            
+            if self.intersects(player):
+                player.hurt(self.damage, self.change_x)
 
-        if self.intersects(player):
-            player.hurt(self.damage, self.change_x)
+            if self.curr_invis_frame > 0 and self.curr_invis_frame % 12 < 6:
+                self.texture = Textures.get_texture(15, 15)
+            else:
+                self.texture = self.tex
+            
+            self.flying = False
+        else:
+            self.flying = True
+            self.wander()
         
         super().update()
 
