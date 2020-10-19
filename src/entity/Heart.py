@@ -17,5 +17,5 @@ class Heart(Mob):
         super().update()
 
     def create_hit_box(self):
-        import Maths
+        from src import Maths
         self.set_hit_box(Maths.create_hit_box(10, 10))
